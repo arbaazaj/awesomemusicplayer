@@ -2,6 +2,8 @@
 
 Awesome Music Player app.
 
+![alt text](https://github.com/arbaazaj/awesomemusicplayer/blob/master/screenshots/screenshot.png?raw=true)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
