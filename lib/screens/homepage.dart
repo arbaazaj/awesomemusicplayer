@@ -155,6 +155,9 @@ class _MyHomePageState extends State<MyHomePage> {
           itemCount: listOfSongs.length,
           itemBuilder: (context, index) {
             final song = listOfSongs[index];
+            var title = song.title.replaceAll('(Pagalworld.pw)', '');
+            var artist = song.artist.replaceAll('(Pagalworld.pw)', '');
+
             return ListTile(
               contentPadding: const EdgeInsets.only(top: 5, bottom: 0),
               isThreeLine: false,
@@ -189,7 +192,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Image.asset('assets/albumart.jpg')),
               ),
               title: Text(
-                song.title,
+                title,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   color: darkPink,
@@ -198,7 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               subtitle: Text(
-                song.artist,
+                artist,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   color: lightBlue,
