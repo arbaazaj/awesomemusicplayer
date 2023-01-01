@@ -99,32 +99,59 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: veryLightPink,
-      bottomNavigationBar: BottomNavigationBar(
-          unselectedLabelStyle: const TextStyle(shadows: [
-            BoxShadow(blurRadius: 5, spreadRadius: 5, color: pinkShadow)
-          ]),
-          selectedLabelStyle: const TextStyle(shadows: [
-            BoxShadow(blurRadius: 5, spreadRadius: 5, color: pinkShadow)
-          ]),
-          elevation: 32.0,
-          selectedItemColor: darkPink,
-          backgroundColor: lightPink,
-          onTap: onTapFunction,
-          currentIndex: _currentIndex,
-          items: const [
-            BottomNavigationBarItem(
-              label: 'Music',
-              icon: Icon(Icons.music_note, shadows: [
-                BoxShadow(blurRadius: 5, spreadRadius: 5, color: pinkShadow)
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16.0),
+              boxShadow: const [
+                BoxShadow(
+                  //color: Color.fromRGBO(160, 160, 160, 0.6),
+                  color: darkPink,
+                  spreadRadius: 2,
+                  blurStyle: BlurStyle.outer,
+                  offset: Offset(0, 0),
+                  blurRadius: 2,
+                ),
               ]),
+          child: Material(
+            borderRadius: BorderRadius.circular(16.0),
+            color: Colors.transparent,
+            elevation: 0.0,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(16.0),
+              child: BottomNavigationBar(
+                  unselectedLabelStyle: const TextStyle(shadows: [
+                    BoxShadow(blurRadius: 5, spreadRadius: 5, color: pinkShadow)
+                  ]),
+                  selectedLabelStyle: const TextStyle(shadows: [
+                    BoxShadow(blurRadius: 5, spreadRadius: 5, color: pinkShadow)
+                  ]),
+                  elevation: 3.0,
+                  selectedItemColor: darkPink,
+                  backgroundColor: lightPink,
+                  onTap: onTapFunction,
+                  currentIndex: _currentIndex,
+                  items: const [
+                    BottomNavigationBarItem(
+                      label: 'Music',
+                      icon: Icon(Icons.music_note, shadows: [
+                        BoxShadow(
+                            blurRadius: 5, spreadRadius: 5, color: pinkShadow)
+                      ]),
+                    ),
+                    BottomNavigationBarItem(
+                      label: 'Chat',
+                      icon: Icon(Icons.chat_bubble_outline, shadows: [
+                        BoxShadow(
+                            blurRadius: 5, spreadRadius: 5, color: pinkShadow)
+                      ]),
+                    ),
+                  ]),
             ),
-            BottomNavigationBarItem(
-              label: 'Chat',
-              icon: Icon(Icons.chat_bubble_outline, shadows: [
-                BoxShadow(blurRadius: 5, spreadRadius: 5, color: pinkShadow)
-              ]),
-            ),
-          ]),
+          ),
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: lightPink,
         onPressed: () {
