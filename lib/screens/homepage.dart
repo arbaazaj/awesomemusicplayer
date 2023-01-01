@@ -1,11 +1,9 @@
 // @dart=2.9
 
 import 'package:assets_audio_player/assets_audio_player.dart';
-import 'package:awesomemusicplayer/screens/account.dart';
 import 'package:awesomemusicplayer/screens/favorite_songs.dart';
 import 'package:awesomemusicplayer/screens/now_playing.dart';
 import 'package:awesomemusicplayer/screens/songs_list_screen.dart';
-import 'package:awesomemusicplayer/test_file.dart';
 import 'package:awesomemusicplayer/themes/colors.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
